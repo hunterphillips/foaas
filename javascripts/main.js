@@ -2,6 +2,7 @@
 const $ = require('jquery'); 
 const factory = require('./factory');  
 const filter = require('./filter');
+const view = require('./view');
 
 
 const btn = $('#getDataBtn');
@@ -16,12 +17,12 @@ btn.click(()=>{
            return filter.getThreats(myData);
         })
         .then(badGuys=>{
-           console.log('bad',badGuys);
+           view.displayFucks(badGuys);
         })
         .catch(err => {
     console.log(`There was a problem: ${err.status} ${err.statusText}`);
   });
-});
+}); 
 
 
 

@@ -12,4 +12,4 @@ module.exports.getThreats = (data)=>{
             }
         });
         return threats;
-}; 
+};
