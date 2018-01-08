@@ -2,9 +2,9 @@
 const $ = require('jquery'); 
 // const output = $('#fuckingOutput');
 
-module.exports.displayFucks = (threatsArr)=>{
+module.exports.displayFucks = (msg, threatsArr)=>{
     threatsArr.forEach(threat =>{
-        let threatString = `<p>Fuck off, ${threat}.</p>`;
+        let threatString = `<p>${msg.replace('.','')}, ${threat}.</p>`;
         $('#fuckingOutput').append(threatString);
     });
 };

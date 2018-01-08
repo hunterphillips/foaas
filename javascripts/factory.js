@@ -18,3 +18,21 @@ module.exports.getAsteroids = (date1, date2) => {
     });
 };
 
+
+module.exports.getFucked = (query) => {
+    console.log('msgs otw');
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: `http://www.foaas.com${query}`,
+            dataType: 'json'
+        })
+            .done(msg => {
+                resolve(msg.message);
+                // console.log(msg.message);
+            })
+            .fail(error => {
+                reject(error);
+            });
+    });
+};
+
