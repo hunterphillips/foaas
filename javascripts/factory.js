@@ -28,7 +28,7 @@ module.exports.getFucked = (query) => {
         })
             .done(msg => {
                 resolve(msg.message);
-                // console.log(msg.message);
+                console.log(msg.message);
             })
             .fail(error => {
                 reject(error);
